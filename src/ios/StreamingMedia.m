@@ -25,6 +25,7 @@
 NSString * const TYPE_VIDEO = @"VIDEO";
 NSString * const TYPE_AUDIO = @"AUDIO";
 NSString * const DEFAULT_IMAGE_SCALE = @"center";
+NSString * const COMPLETED = @"COMPLETED";
 
 -(void)parseOptions:(NSDictionary *)options type:(NSString *) type {
 	// Common options
@@ -267,7 +268,7 @@ NSString * const DEFAULT_IMAGE_SCALE = @"center";
 		if ([errorMsg length] != 0) {
 			pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:errorMsg];
 		} else {
-			pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:true];
+			pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:COMPLETED];
 		}
 		[self.commandDelegate sendPluginResult:pluginResult callbackId:callbackId];
 	}
