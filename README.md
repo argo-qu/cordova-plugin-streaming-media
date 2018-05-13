@@ -12,7 +12,7 @@ This plugin allows you to stream audio and video in a fullscreen, native player 
 ## Installation
 
 ```
-cordova plugin add cordova-plugin-streaming-media
+cordova plugin add https://github.com/argo-qu/cordova-plugin-streaming-media.git
 ```
 
 ### iOS specifics
